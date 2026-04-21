@@ -2,6 +2,7 @@
 #include <array>
 #include <random>
 #include <raylib.h>
+#include <raymath.h>
 
 const int screenWidth = 700;
 const int screenHeight = 400;
@@ -55,6 +56,7 @@ int main() {
     EndDrawing();
   }
   CloseWindow();
+  return 0;
 }
 
 template <typename T> T getRandom(T min, T max) {
