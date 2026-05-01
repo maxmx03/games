@@ -7,10 +7,17 @@ void Controller::enemyUp(float &py, float &ey) { ey -= speed; }
 void Controller::enemyDown(float &py, float &ey) { ey += speed; }
 
 InputConfig Controller::getConfig() {
-  InputConfig inputConfig = {
-      {{KEY_W, [&](float &py, float &ey) { playerUp(py, ey); }},
-       {KEY_S, [&](float &py, float &ey) { playerDown(py, ey); }},
-       {KEY_UP, [&](float &py, float &ey) { enemyUp(py, ey); }},
-       {KEY_DOWN, [&](float &py, float &ey) { enemyDown(py, ey); }}}};
+  InputConfig inputConfig = {{
+      {KEY_W,
+       [&](float &py, float &ey) {
+         playerUp(py, ey);
+         enemyDown(py, ey);
+       }},
+      {KEY_S,
+       [&](float &py, float &ey) {
+         playerDown(py, ey);
+         enemyUp(py, ey);
+       }},
+  }};
   return inputConfig;
 }
