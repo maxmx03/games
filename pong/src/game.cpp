@@ -1,5 +1,4 @@
 #include "game.hpp"
-#include <cmath>
 #include <raylib.h>
 #include <raymath.h>
 
@@ -61,7 +60,6 @@ void Game::draw() {
   DrawRectangleRec(enemy, WHITE);
   DrawRectangleRec(ball, WHITE);
 
-  // Placar
   DrawText(TextFormat("%d", playerScore), screenWidth / 4, 20, 40, WHITE);
   DrawText(TextFormat("%d", enemyScore), screenWidth * 3 / 4, 20, 40, WHITE);
 
