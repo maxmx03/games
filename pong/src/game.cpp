@@ -1,5 +1,4 @@
 #include "game.hpp"
-#include <raylib.h>
 #include <raymath.h>
 
 const int screenWidth = 1280;

@@ -1,6 +1,4 @@
 #include "game.hpp"
-#include <raylib.h>
-#include <raymath.h>
 
 int main() {
   Game game;
